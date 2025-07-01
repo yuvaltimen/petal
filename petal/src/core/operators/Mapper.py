@@ -1,6 +1,6 @@
 from typing import Any
 
-from core.operators.NonTerminalOperator import NonTerminalOperator
+from petal.src.core.operators.NonTerminalOperator import NonTerminalOperator
 
 
 class Mapper(NonTerminalOperator):

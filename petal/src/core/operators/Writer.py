@@ -1,6 +1,6 @@
 from typing import Iterable, Any
 
-from core.operators.Sink import Sink
+from petal.src.core.operators.Sink import Sink
 
 
 class Writer(Sink):

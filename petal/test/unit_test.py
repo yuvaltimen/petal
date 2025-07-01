@@ -1,5 +1,5 @@
 import pytest
-from core import is_dag, topological_sort
+from petal.src.core.utils import is_dag, topological_sort
 
 
 # -------------------------------

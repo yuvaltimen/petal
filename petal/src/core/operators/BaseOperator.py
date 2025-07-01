@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any
-from core.context import get_current_pipeline
+from petal.src.core.context import get_current_pipeline
 
 
 class BaseOperator(ABC):

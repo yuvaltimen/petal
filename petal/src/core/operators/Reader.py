@@ -1,6 +1,6 @@
 from typing import Iterable, Any
 
-from core.operators.Source import Source
+from petal.src.core.operators.Source import Source
 
 
 class Reader(Source):

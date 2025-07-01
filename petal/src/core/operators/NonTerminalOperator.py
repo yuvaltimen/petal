@@ -1,7 +1,7 @@
 from abc import ABC
 
-from core.operators.Sink import Sink
-from core.operators.Source import Source
+from petal.src.core.operators.Sink import Sink
+from petal.src.core.operators.Source import Source
 
 
 class NonTerminalOperator(Source, Sink, ABC):

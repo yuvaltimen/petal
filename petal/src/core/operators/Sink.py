@@ -1,6 +1,6 @@
 from abc import ABC
 
-from core.operators.BaseOperator import BaseOperator
+from petal.src.core.operators.BaseOperator import BaseOperator
 
 
 class Sink(BaseOperator, ABC):
