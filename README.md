@@ -39,12 +39,21 @@ dag.run()
 ```python
     with Pipeline("03_splitting_streams_to_multiple_destinations") as dag:
         read_logs = FileReader("read_logs", file_path="../data/example_input.txt")
+        # Fan-out operator that can be used to split the stream into multiple threads
         splitter = Splitter("split")
+        
+        # One branch will be just a direct copy
+        write_to_file_unfiltered = FileWriter("write_unfiltered", file_path="../data/example_output_unfiltered.txt")
+        
+        # The other branch will be nice and filtered
         pattern_filter = RegexFilter("filter_info", pattern="^INFO")
         write_to_file_filtered = FileWriter("write_filtered", file_path="../data/example_output_filtered.txt")
-        write_to_file_unfiltered = FileWriter("write_unfiltered", file_path="../data/example_output_unfiltered.txt")
+        
 
+        # Read the logs into the splitter...
         read_logs >> splitter
+        
+        # ...then read as many branches from the splitter as you want
         splitter >> pattern_filter >> write_to_file_filtered
         splitter >> write_to_file_unfiltered
 
