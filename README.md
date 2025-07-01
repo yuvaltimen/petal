@@ -61,7 +61,7 @@ dag.run()
 ```
 
 ### Development
-After cloning this repo, make sure to run:
+After cloning this repo, make sure to run the following:
 ```bash
 pip install -r requirements
 pre-commit install
