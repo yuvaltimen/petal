@@ -60,9 +60,12 @@ dag.run()
     dag.run()
 ```
 
-### Developement
+### Development
 After cloning this repo, make sure to run:
-`pre-commit install`.
+```bash
+pip install -r requirements
+pre-commit install
+```
 
 ### Theory
 There are 3 types of Operators - **Sources**, **Sinks**, and **Non-Terminal Operators.**
