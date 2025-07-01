@@ -3,7 +3,7 @@ from src.core.utils import is_dag, topological_sort
 
 
 # -------------------------------
-# ✅ DAG VALIDATION TESTS
+# DAG VALIDATION TESTS
 # -------------------------------
 
 def test_is_dag_simple_linear():
@@ -46,7 +46,7 @@ def test_is_dag_with_subgraph_cycle():
 
 
 # -------------------------------
-# ✅ TOPOLOGICAL SORT TESTS
+# TOPOLOGICAL SORT TESTS
 # -------------------------------
 
 def test_topological_sort_linear_chain():
@@ -100,7 +100,7 @@ def test_topological_sort_raises_on_self_loop():
 
 
 # -------------------------------
-# ✅ Optional: Empty/degenerate cases
+# Empty/degenerate cases
 # -------------------------------
 
 def test_topological_sort_empty():
