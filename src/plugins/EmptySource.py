@@ -1,4 +1,4 @@
-from src.core.operators import Source
+from src.core.operators.Source import Source
 
 
 class EmptySource(Source):

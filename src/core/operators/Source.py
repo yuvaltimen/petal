@@ -1,9 +1,10 @@
+from abc import ABC
 
-from src.core.operators import BaseOperator
+from src.core.operators.BaseOperator import BaseOperator
 from src.core.context import get_current_pipeline
 
 
-class Source(BaseOperator):
+class Source(BaseOperator, ABC):
     def __init__(self, operator_id: str):
         super().__init__(operator_id)
         self.downstream = []

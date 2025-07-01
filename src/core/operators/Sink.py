@@ -1,7 +1,9 @@
-from src.core.operators import BaseOperator
+from abc import ABC
+
+from src.core.operators.BaseOperator import BaseOperator
 
 
-class Sink(BaseOperator):
+class Sink(BaseOperator, ABC):
     def __init__(self, operator_id: str):
         super().__init__(operator_id)
         self.upstream = []

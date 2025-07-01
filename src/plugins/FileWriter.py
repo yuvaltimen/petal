@@ -1,6 +1,6 @@
 from collections.abc import Iterable
 
-from src.core.operators import Writer
+from src.core.operators.Writer import Writer
 
 
 class FileWriter(Writer):
@@ -9,7 +9,7 @@ class FileWriter(Writer):
         super().__init__(operator_id)
         self.file_path = file_path
 
-    def write(self, data: Iterable[str]) -> None:
+    def process(self, data: Iterable[str]) -> None:
         print(f"FileWriter: writing to file {self.file_path}.")
         with open(self.file_path, 'w') as f:
             ctr = 0

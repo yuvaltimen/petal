@@ -7,21 +7,24 @@ class Pipeline(PipelineContext):
         super().__init__()
         self.name = pipeline_name
 
-        def validate(self):
-            if not is_dag(self.edges):
-                raise ValueError("Pipeline contains a cycle")
+    def validate(self):
+        if not is_dag(self.edges):
+            raise ValueError("Pipeline contains a cycle")
 
-        def run(self):
-            self.validate()
+    def run(self):
+        self.validate()
 
-            execution_order = topological_sort(self.edges)
-            context = {}
+        execution_order = topological_sort(self.edges)
+        context = {}
 
-            print(f"[RUNNING] Pipeline '{self.name}'")
+        print(f"[RUNNING] Pipeline '{self.name}'")
+        print(f"{execution_order=}")
+        print(f"{self.nodes=}")
+        print(f"{context=}")
 
-            for node_id in execution_order:
-                node = self.nodes[node_id]
-                inputs = [context[parent.node_id] for parent in node.upstream]
-                print(f"  - Executing node: {node_id}")
-                result = node.process(*inputs)
-                context[node_id] = result
+        for op_id in execution_order:
+            node = self.nodes[op_id]
+            inputs = [context[parent.operator_id] for parent in getattr(node, 'upstream', [])]
+            print(f"  - Executing operator: {op_id} with {inputs=}")
+            result = node.process(*inputs)
+            context[op_id] = result
