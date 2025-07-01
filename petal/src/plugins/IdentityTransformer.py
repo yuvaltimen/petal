@@ -1,6 +1,6 @@
 from typing import Any
 
-from src.core.operators import Mapper
+from core.operators import Mapper
 
 
 class IdentityTransformer(Mapper):

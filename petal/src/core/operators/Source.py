@@ -1,7 +1,7 @@
 from abc import ABC
 
-from src.core.operators.BaseOperator import BaseOperator
-from src.core.context import get_current_pipeline
+from core.operators.BaseOperator import BaseOperator
+from core.context import get_current_pipeline
 
 
 class Source(BaseOperator, ABC):

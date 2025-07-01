@@ -1,6 +1,6 @@
 from abc import ABC
 
-from src.core.operators.BaseOperator import BaseOperator
+from core.operators.BaseOperator import BaseOperator
 
 
 class Sink(BaseOperator, ABC):

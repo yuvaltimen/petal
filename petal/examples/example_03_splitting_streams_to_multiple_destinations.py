@@ -1,9 +1,9 @@
 
-from src.core.pipeline import Pipeline
+from core import Pipeline
 
-from src.plugins.FileReader import FileReader
-from src.plugins.FileWriter import FileWriter
-from src.plugins.RegexFilter import RegexFilter
+from plugins.FileReader import FileReader
+from plugins.FileWriter import FileWriter
+from plugins.RegexFilter import RegexFilter
 from src.plugins.Splitter import Splitter
 
 

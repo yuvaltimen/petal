@@ -1,6 +1,6 @@
 from collections.abc import Iterable
 
-from src.core.operators.Writer import Writer
+from core.operators.Writer import Writer
 
 
 class FileWriter(Writer):

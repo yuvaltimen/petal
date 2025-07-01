@@ -1,5 +1,5 @@
-from src.core.pipeline import Pipeline
-from src.plugins.EmptySource import EmptySource
+from core import Pipeline
+from plugins.EmptySource import EmptySource
 
 from src.plugins.NoOpSink import NoOpSink
 

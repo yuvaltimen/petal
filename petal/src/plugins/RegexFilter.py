@@ -1,5 +1,5 @@
 import re
-from src.core.operators.Mapper import Mapper
+from core.operators.Mapper import Mapper
 
 
 class RegexFilter(Mapper):

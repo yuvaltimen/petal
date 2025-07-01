@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from src.core.operators.Reader import Reader
+from core.operators.Reader import Reader
 
 
 class FileReader(Reader):

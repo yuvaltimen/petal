@@ -1,5 +1,5 @@
 import pytest
-from src.core.utils import is_dag, topological_sort
+from core import is_dag, topological_sort
 
 
 # -------------------------------

@@ -1,6 +1,6 @@
 from typing import Any
 
-from src.core.operators.Sink import Sink
+from core.operators.Sink import Sink
 
 
 class NoOpSink(Sink):

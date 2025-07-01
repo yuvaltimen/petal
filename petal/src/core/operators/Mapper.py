@@ -1,6 +1,6 @@
 from typing import Any
 
-from src.core.operators.NonTerminalOperator import NonTerminalOperator
+from core.operators.NonTerminalOperator import NonTerminalOperator
 
 
 class Mapper(NonTerminalOperator):

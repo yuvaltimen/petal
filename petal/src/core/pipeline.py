@@ -1,7 +1,7 @@
 from types import GeneratorType
 
-from src.core.context import PipelineContext
-from src.core.utils import is_dag, topological_sort
+from core.context import PipelineContext
+from core.utils import is_dag, topological_sort
 
 
 class Pipeline(PipelineContext):
