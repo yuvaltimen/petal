@@ -1,0 +1,6 @@
+INFO: info line 1
+WARN: warning line 1
+INFO: info line 2
+WARN: warning line 2
+WARN: warning line 3
+INFO: info line 3

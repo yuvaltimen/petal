@@ -1,3 +1,5 @@
+from types import GeneratorType
+
 from src.core.context import PipelineContext
 from src.core.utils import is_dag, topological_sort
 
@@ -27,4 +29,7 @@ class Pipeline(PipelineContext):
             inputs = [context[parent.operator_id] for parent in getattr(node, 'upstream', [])]
             print(f"  - Executing operator: {op_id} with {inputs=}")
             result = node.process(*inputs)
+            # If it's a generator, materialize it for memoization
+            if isinstance(result, GeneratorType):
+                result = list(result)
             context[op_id] = result
