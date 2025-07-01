@@ -1,7 +1,7 @@
-from core.pipeline import Pipeline
-from plugins.FileReader import FileReader
-from plugins.FileWriter import FileWriter
-from plugins.RegexFilter import RegexFilter
+from petal.src.core.pipeline import Pipeline
+from petal.src.plugins.FileReader import FileReader
+from petal.src.plugins.FileWriter import FileWriter
+from petal.src.plugins.RegexFilter import RegexFilter
 
 
 def main():

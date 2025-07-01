@@ -1,6 +1,6 @@
-from core.pipeline import Pipeline
-from plugins.EmptySource import EmptySource
-from plugins.NoOpSink import NoOpSink
+from petal.src.core.pipeline import Pipeline
+from petal.src.plugins.EmptySource import EmptySource
+from petal.src.plugins.NoOpSink import NoOpSink
 
 
 def main():
