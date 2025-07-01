@@ -1,5 +1,6 @@
 from typing import Iterable
 
+from petal.src.logger import logger
 from petal.src.core.operators.Reader import Reader
 
 
@@ -10,14 +11,14 @@ class FileReader(Reader):
         self.file_path = file_path
 
     def process(self) -> Iterable[str]:
-        print(f"FileReader: reading file {self.file_path}.")
+        logger.info(f"FileReader: reading file {self.file_path}.")
         try:
             with open(self.file_path, 'r') as f:
                 ctr = 0
                 for line in f.readlines():
-                    print(f'FileReader: reading line {ctr}...')
+                    logger.info(f'FileReader: reading line {ctr}...')
                     yield line
                     ctr += 1
-            print("FileReader: done reading.")
+            logger.info("FileReader: done reading.")
         except FileNotFoundError as e:
-            print(f"FileReader: no such file {self.file_path}")
+            logger.info(f"FileReader: no such file {self.file_path}")

@@ -1,5 +1,6 @@
 from collections.abc import Iterable
 
+from petal.src.logger import logger
 from petal.src.core.operators.Writer import Writer
 
 
@@ -10,10 +11,10 @@ class FileWriter(Writer):
         self.file_path = file_path
 
     def process(self, data: Iterable[str]) -> None:
-        print(f"FileWriter: writing to file {self.file_path}.")
+        logger.info(f"FileWriter: writing to file {self.file_path}.")
         with open(self.file_path, 'w') as f:
             ctr = 0
-            print(f"FileWriter: writing line {ctr}...")
+            logger.info(f"FileWriter: writing line {ctr}...")
             f.writelines(data)
-        print(f"FileWriter: done writing.")
+        logger.info(f"FileWriter: done writing.")
 

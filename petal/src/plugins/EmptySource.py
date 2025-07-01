@@ -1,3 +1,4 @@
+from petal.src.logger import logger
 from petal.src.core.operators.Source import Source
 
 
@@ -7,4 +8,4 @@ class EmptySource(Source):
         super().__init__(operator_id)
 
     def process(self) -> None:
-        print("EmptySource: no-op")
+        logger.info("EmptySource: no-op")
