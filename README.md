@@ -7,18 +7,33 @@ Follow along in the `/examples` directory to build up arbitrary pipelines.
 
 (This is modeled on Airflow's DAG Operator model for intuitive composition in Python.)
 
-### 01 - Trivial Case
+### 01. Trivial Case
 
 ```python
-# 
+# The most trivial pipeline possible
+with Pipeline("01_noop") as dag:  # Define the pipeline context manager, inner block gets scoped to this object
+    source = EmptySource("empty_source")  # Define operators
+    sink = NoOpSink("no_op_sink")
 
+    source >> sink  # Compose the operators into a DAG
+
+dag.run()
 ```
 
-### 01 - Simple Case
+### 02. Simple Case - Single ETL Step
 
 ```python
+# A single ETL step
+with Pipeline("02_cop_file_to_file") as dag:
+    read_logs = FileReader("read_logs", file_path="../data/example_input.txt")
+    pattern_filter = RegexFilter("filter_info", pattern="^INFO")
+    write_to_file = FileWriter("write_file", file_path="../data/example_output.txt")
 
+    read_logs >> pattern_filter >> write_to_file
+
+dag.run()
 ```
+
 
 ### Theory
 There are 3 types of Operators - **Sources**, **Sinks**, and **Non-Terminal Operators.**
