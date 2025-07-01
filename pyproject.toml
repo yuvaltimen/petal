@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "petal-etl-composer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Composable ETL Logic Layer"
 authors = [
   { name="Yuval Timen", email="yuvaltimen@gmail.com" }
@@ -15,7 +15,7 @@ requires-python = ">=3.8"
 dependencies = []
 
 [project.scripts]
-petal = "etl_composer.cli:main"
+petal = "petal.src.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
