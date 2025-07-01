@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: check-version-consistency
+        name: Check version match in pyproject and __init__
+        entry: bash scripts/check_version_consistency.sh
+        language: system
+        types: [python]
