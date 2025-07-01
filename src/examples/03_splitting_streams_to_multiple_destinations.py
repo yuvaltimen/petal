@@ -8,7 +8,7 @@ from src.plugins.Splitter import Splitter
 
 
 def main():
-    with Pipeline("02_copy_file_to_file") as dag:
+    with Pipeline("03_splitting_streams_to_multiple_destinations") as dag:
         read_logs = FileReader("read_logs", file_path="../data/example_input.txt")
         splitter = Splitter("split")
         pattern_filter = RegexFilter("filter_info", pattern="^INFO")
