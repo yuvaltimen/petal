@@ -1,5 +1,5 @@
 import re
-from core.operators.Mapper import Mapper
+from petal.src.core.operators.Mapper import Mapper
 
 
 class RegexFilter(Mapper):

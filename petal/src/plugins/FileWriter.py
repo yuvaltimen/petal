@@ -1,6 +1,6 @@
 from collections.abc import Iterable
 
-from core.operators.Writer import Writer
+from petal.src.core.operators.Writer import Writer
 
 
 class FileWriter(Writer):

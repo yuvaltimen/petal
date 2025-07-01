@@ -1,7 +1,7 @@
 from types import GeneratorType
 
-from context import PipelineContext
-from utils import is_dag, topological_sort
+from petal.src.core.context import PipelineContext
+from petal.src.core.utils import is_dag, topological_sort
 
 
 class Pipeline(PipelineContext):

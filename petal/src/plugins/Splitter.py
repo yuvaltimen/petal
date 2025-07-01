@@ -1,7 +1,7 @@
 import copy
 from typing import Any, Iterable
 
-from core.operators.NonTerminalOperator import NonTerminalOperator
+from petal.src.core.operators.NonTerminalOperator import NonTerminalOperator
 
 
 class Splitter(NonTerminalOperator):

@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from core.operators.Reader import Reader
+from petal.src.core.operators.Reader import Reader
 
 
 class FileReader(Reader):

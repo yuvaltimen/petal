@@ -1,6 +1,6 @@
 from typing import Any
 
-from core.operators import Mapper
+from petal.src.core.operators import Mapper
 
 
 class IdentityTransformer(Mapper):

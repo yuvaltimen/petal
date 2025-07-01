@@ -1,6 +1,6 @@
 from typing import Any
 
-from core.operators.Sink import Sink
+from petal.src.core.operators.Sink import Sink
 
 
 class NoOpSink(Sink):
