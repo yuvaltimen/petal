@@ -1,7 +1,6 @@
-from core import Pipeline
+from core.pipeline import Pipeline
 from plugins.EmptySource import EmptySource
-
-from src.plugins.NoOpSink import NoOpSink
+from plugins.NoOpSink import NoOpSink
 
 
 def main():

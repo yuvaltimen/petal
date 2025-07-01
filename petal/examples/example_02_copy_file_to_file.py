@@ -1,5 +1,4 @@
-from core import Pipeline
-
+from core.pipeline import Pipeline
 from plugins.FileReader import FileReader
 from plugins.FileWriter import FileWriter
 from plugins.RegexFilter import RegexFilter

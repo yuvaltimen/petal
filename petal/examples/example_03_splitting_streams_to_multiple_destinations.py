@@ -1,10 +1,8 @@
-
-from core import Pipeline
-
+from core.pipeline import Pipeline
 from plugins.FileReader import FileReader
 from plugins.FileWriter import FileWriter
 from plugins.RegexFilter import RegexFilter
-from src.plugins.Splitter import Splitter
+from plugins.Splitter import Splitter
 
 
 def main():
