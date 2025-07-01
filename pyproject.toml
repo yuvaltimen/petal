@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "petal-etl-composer"
-version = "0.1.5"
+version = "0.1.6"
 description = "Composable ETL Logic Layer"
 authors = [
   { name="Yuval Timen", email="yuvaltimen@gmail.com" }
