@@ -1,11 +1,12 @@
 from collections.abc import Iterable
 
-from core.writer import Writer
+from src.core.operators import Writer
 
 
 class FileWriter(Writer):
 
-    def __init__(self, file_path):
+    def __init__(self, operator_id, file_path: str):
+        super().__init__(operator_id)
         self.file_path = file_path
 
     def write(self, data: Iterable[str]) -> None:

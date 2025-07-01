@@ -1,14 +1,15 @@
 from typing import Iterable
 
-from core.reader import Reader
+from src.core.operators.Reader import Reader
 
 
 class FileReader(Reader):
 
-    def __init__(self, file_path):
+    def __init__(self, operator_id: str, file_path: str):
+        super().__init__(operator_id)
         self.file_path = file_path
 
-    def read(self) -> Iterable[str]:
+    def process(self) -> Iterable[str]:
         print(f"FileReader: reading file {self.file_path}.")
         try:
             with open(self.file_path, 'r') as f:
