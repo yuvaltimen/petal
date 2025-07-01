@@ -1,3 +1,4 @@
+import os.path
 from types import GeneratorType
 
 from petal.src.logger import logger
@@ -20,10 +21,9 @@ class Pipeline(PipelineContext):
         execution_order = topological_sort(self.edges)
         context = {}
 
-        logger.info(f"[RUNNING] Pipeline '{self.name}'")
+        logger.info(f"Executing Pipeline: '{self.name}'")
         logger.info(f"{execution_order=}")
         logger.info(f"{self.nodes=}")
-        logger.info(f"{context=}")
 
         for op_id in execution_order:
             node = self.nodes[op_id]
