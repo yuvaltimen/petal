@@ -1,11 +1,8 @@
 import re
-from petal.src.core.operators.Mapper import Mapper
+from petal.src.core.operators.Filter import Filter
 
 
-class RegexFilter(Mapper):
+class RegexFilter(Filter):
     def __init__(self, operator_id, pattern):
-        super().__init__(operator_id)
+        super().__init__(operator_id, lambda x: self.pattern.search(x))
         self.pattern = re.compile(pattern)
-
-    def process(self, lines):
-        return [line for line in lines if self.pattern.search(line)]

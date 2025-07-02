@@ -1,4 +1,3 @@
-import os.path
 from types import GeneratorType
 
 from petal.src.logger import logger
@@ -23,12 +22,12 @@ class Pipeline(PipelineContext):
 
         logger.info(f"Executing Pipeline: '{self.name}'")
         logger.info(f"{execution_order=}")
-        logger.info(f"{self.nodes=}")
+        logger.info(f"{self.edges=}")
 
         for op_id in execution_order:
             node = self.nodes[op_id]
             inputs = [context[parent.operator_id] for parent in getattr(node, 'upstream', [])]
-            logger.info(f"  - Executing operator: {op_id} with {inputs=}")
+            logger.info(f"\tExecuting operator: {op_id} with {inputs=}")
             result = node.process(*inputs)
             # If it's a generator, materialize it for memoization
             if isinstance(result, GeneratorType):

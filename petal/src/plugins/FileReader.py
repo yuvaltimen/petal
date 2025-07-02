@@ -11,14 +11,14 @@ class FileReader(Reader):
         self.file_path = file_path
 
     def process(self) -> Iterable[str]:
-        logger.info(f"FileReader: reading file {self.file_path}.")
+        logger.info(f"\t\tFileReader: reading file {self.file_path}.")
         try:
             with open(self.file_path, 'r') as f:
                 ctr = 0
                 for line in f.readlines():
-                    logger.info(f'FileReader: reading line {ctr}...')
+                    logger.info(f'\t\tFileReader: reading line {ctr}...')
                     yield line
                     ctr += 1
-            logger.info("FileReader: done reading.")
+            logger.info("\t\tFileReader: done reading.")
         except FileNotFoundError as e:
-            logger.info(f"FileReader: no such file {self.file_path}")
+            logger.info(f"\t\tFileReader: no such file {self.file_path}")

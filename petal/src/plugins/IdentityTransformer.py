@@ -1,11 +1,8 @@
-from typing import Any
-
-from petal.src.logger import logger
 from petal.src.core.operators import Mapper
 
 
 class IdentityTransformer(Mapper):
 
-    def process(self, data: Any) -> Any:
-        logger.info(f'IdentityTransformer: {data}')
-        return data
+    def __init__(self, operator_id: str):
+        super().__init__(operator_id)
+        self.mapping_func = lambda x: x

@@ -1,3 +1,4 @@
+import copy
 from typing import Any, Iterable, Callable
 from functools import reduce
 
@@ -9,5 +10,5 @@ class Joiner(NonTerminalOperator):
         super().__init__(operator_id)
         self.reducer_func = reducer_func
 
-    def process(self, *data: Iterable[Any]) -> Any:
-        return reduce(self.reducer_func, data)
+    def process(self, *data: Iterable[Iterable[Any]]) -> Iterable[Any]:
+        return reduce(self.reducer_func, copy.deepcopy(data))
