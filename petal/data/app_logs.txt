@@ -1,0 +1,31 @@
+2025-07-02 09:12:01,234 [INFO] django.server: Starting development server at http://127.0.0.1:8000/
+2025-07-02 09:12:01,235 [INFO] django.server: Quit the server with CONTROL-C.
+2025-07-02 09:12:05,412 [DEBUG] myapp.middleware: Request ID abc123 started for /api/users/
+2025-07-02 09:12:05,413 [INFO] myapp.views: GET /api/users/ from 127.0.0.1
+2025-07-02 09:12:05,423 [DEBUG] myapp.serializers: Serialized 12 users
+2025-07-02 09:12:05,425 [INFO] myapp.middleware: Request ID abc123 completed in 12ms
+2025-07-02 09:12:06,109 [DEBUG] myapp.middleware: Request ID def456 started for /api/login/
+2025-07-02 09:12:06,112 [INFO] myapp.views: POST /api/login/ from 127.0.0.1
+2025-07-02 09:12:06,120 [DEBUG] myapp.auth: Authenticated user admin@example.com
+2025-07-02 09:12:06,121 [INFO] myapp.middleware: Request ID def456 completed in 14ms
+2025-07-02 09:12:08,998 [DEBUG] myapp.middleware: Request ID ghi789 started for /api/items/
+2025-07-02 09:12:09,000 [INFO] myapp.views: GET /api/items/ from 127.0.0.1
+2025-07-02 09:12:09,005 [WARNING] myapp.db: Item fetch took 450ms, which exceeds threshold
+2025-07-02 09:12:09,006 [INFO] myapp.middleware: Request ID ghi789 completed in 9ms
+2025-07-02 09:12:10,443 [DEBUG] myapp.middleware: Request ID jkl012 started for /api/upload/
+2025-07-02 09:12:10,445 [INFO] myapp.views: POST /api/upload/ from 127.0.0.1
+2025-07-02 09:12:10,446 [ERROR] myapp.views: File upload failed: FileTooLargeError
+2025-07-02 09:12:10,448 [INFO] myapp.middleware: Request ID jkl012 completed in 5ms
+2025-07-02 09:12:13,102 [DEBUG] myapp.middleware: Request ID mno345 started for /api/items/45/
+2025-07-02 09:12:13,104 [INFO] myapp.views: DELETE /api/items/45/ from 127.0.0.1
+2025-07-02 09:12:13,110 [INFO] myapp.db: Item 45 deleted successfully
+2025-07-02 09:12:13,111 [INFO] myapp.middleware: Request ID mno345 completed in 9ms
+2025-07-02 09:12:14,551 [DEBUG] myapp.middleware: Request ID pqr678 started for /api/users/5/
+2025-07-02 09:12:14,552 [INFO] myapp.views: PUT /api/users/5/ from 127.0.0.1
+2025-07-02 09:12:14,555 [WARNING] myapp.validation: Invalid email format for user 5
+2025-07-02 09:12:14,556 [ERROR] myapp.views: Failed to update user 5: ValidationError
+2025-07-02 09:12:14,557 [INFO] myapp.middleware: Request ID pqr678 completed in 6ms
+2025-07-02 09:12:16,883 [DEBUG] myapp.middleware: Request ID stu901 started for /api/stats/
+2025-07-02 09:12:16,884 [INFO] myapp.views: GET /api/stats/ from 127.0.0.1
+2025-07-02 09:12:16,890 [INFO] myapp.analytics: Stats generated for 2025-07-02
+2025-07-02 09:12:16,891 [INFO] myapp.middleware: Request ID stu901 completed in 8ms
