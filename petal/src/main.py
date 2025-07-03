@@ -1,8 +1,5 @@
+from petal.examples.example_01_noop import main as noop_pipeline
+
 
 def main():
-    print("See examples for how to get started!")
-
-
-if __name__ == '__main__':
-    main()
-
+    noop_pipeline()

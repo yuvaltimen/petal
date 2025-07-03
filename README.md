@@ -188,6 +188,8 @@ pip install -r requirements
 pre-commit install  # This will set up the pre-commit hooks 
 ```
 
-If you have suggestions 
+If you have suggestions, open an Issue or a Pull Request. 
+
+https://pypi.org/project/petal-etl-composer/
 
 

@@ -21,4 +21,5 @@ class FileReader(Reader):
                     ctr += 1
             logger.info("\t\tFileReader: done reading.")
         except FileNotFoundError as e:
-            logger.info(f"\t\tFileReader: no such file {self.file_path}")
+            logger.error(f"\t\tFileReader: no such file {self.file_path}")
+            raise e
